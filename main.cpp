@@ -12,7 +12,7 @@ int main() {
         size_t first_space = command.find(' ');
         if (first_space == std::string::npos) {
             std::string query = command;
-            if ( query.find(' ') != std::string::npos) {
+            if ( query.find('-') != std::string::npos) {
                 if (phone_to_name.count(query)) {
                     std::cout << phone_to_name[query] << std::endl;
                 } else {
